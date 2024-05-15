@@ -2,6 +2,7 @@ const form = document.getElementById("my-form");
 const userList = document.getElementById("user-list");
 
 form.addEventListener("submit", addAppointmentData);
+document.addEventListener("DOMContentLoaded", loadAppointmentData);
 
 function loadAppointmentData() {
     for (let i = 0; i < localStorage.length; i++) {
@@ -11,7 +12,6 @@ function loadAppointmentData() {
         showOnScreen(userData);
     }
 }
-loadAppointmentData();
 
 function addAppointmentData(e) {
     e.preventDefault();
