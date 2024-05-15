@@ -2,6 +2,7 @@ const form = document.getElementById("my-form");
 const userList = document.getElementById("user-list");
 
 form.addEventListener("submit", addAppointmentData);
+document.addEventListener("DOMContentLoaded", loadAppointmentData);
 
 async function loadAppointmentData() {
     try {
@@ -13,7 +14,6 @@ async function loadAppointmentData() {
         console.error("failed to load users:", err);
     }
 }
-loadAppointmentData();
 
 async function addAppointmentData(e) {
     try {
